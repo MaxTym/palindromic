@@ -9,8 +9,8 @@ def is_palindrome(string1):
     string2 = new_str[::-1]
     if new_str.lower() == string2.lower():
         return True
-    else:
-        return False
+    # else:
+    #     return False
 
 def main(string1):
     string1 = input("Enter some text: ")

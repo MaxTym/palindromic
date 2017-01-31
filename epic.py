@@ -1,8 +1,24 @@
 string1 = ''
 
+def readbyblock(f):
+    while True:
+        block = []
+        for line in f:
+            if line = '----\n':
+                break
+                block.append(line)
+        if not block:
+            break
+        yield block
+
 def read_file(string1):
-    string1 = open('newfile.txt', 'r')
-    return string1.read()
+    inFile = open("newfile.txt")
+    string1 = ''
+    for line in inFile:
+        string1 += line
+    return string1
+    print(string1)
+    inFile.close()
 
 def is_palindrome(string1):
     new_str = ''
@@ -18,7 +34,7 @@ def is_palindrome(string1):
     else:
         return False
 
-def main(string1):
+def main():
     #string1 = input("Enter some text: ")
     #read_file(string1)
     #print(read_file(string1))
@@ -27,4 +43,4 @@ def main(string1):
     else:
         print("It's not a polindrome")
 
-main(string1)
+main()

@@ -1,5 +1,3 @@
-string1 = ''
-
 def recursion(string1):
     if len(string1) == 0:
         return string1
@@ -16,18 +14,16 @@ def is_palindrome(string1):
     for l in rev_string:
         if l.isalpha():
             new_str += l
-    print(new_str)
-    print(new_str1)
     if new_str1.lower() == new_str.lower():
         return True
     else:
         return False
 
-def main(string1):
+def main():
     string1 = input("Enter some text: ")
     if is_palindrome(string1) is True:
         print("It is a palindrome")
     else:
         print("It's not a palindrome")
 
-main(string1)
+main()
